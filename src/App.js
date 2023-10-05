@@ -8,9 +8,9 @@ import { Box } from '@mui/material';
 import SpinnerLoading from './components/SpinnerLoading';
 import NotFound from './components/NotFound';
 
-import { inject } from '@vercel/analytics';
+// import { inject } from '@vercel/analytics';
 
-inject();
+// inject();
 
 const AdhkarPage = lazy(() => import('./pages/AdhkarPage'));
 const HijriCalendarPage = lazy(() => import('./pages/HijriCalendarPage'));

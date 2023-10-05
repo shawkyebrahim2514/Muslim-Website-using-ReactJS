@@ -1,4 +1,4 @@
-import { useCallback, useContext, useMemo, useState } from 'react'
+import { Fragment, useCallback, useContext, useMemo, useState } from 'react'
 import quranSurahs from '../../../../../../data/surahs'
 import { setCurrentPage, setCurrentSurahNumber } from '../../../../../../reducers/QuranPlayerReducer';
 import QuranPlayerContext from '../../../QuranPlayerContext';
@@ -7,6 +7,7 @@ import Collapse from '@mui/material/Collapse';
 import { Divider } from '@mui/material';
 import QuranSurahItem from './QuranSurahItem';
 import QuranSurahsListTitle from './QuranSurahsListTitle';
+import { v4 as uuid } from 'uuid';
 
 export default function QuranSurahsList() {
     const [quranPlayerState, dispatchQuranPlayerState] = useContext(QuranPlayerContext);
@@ -21,15 +22,15 @@ export default function QuranSurahsList() {
     const surahsItems = useMemo(() => {
         return quranSurahs.map((surah, index) => {
             return (
-                <>
+                <Fragment key={uuid()}>
                     <QuranSurahItem
                         itemNumber={index + 1}
                         isActive={quranPlayerState.currentSurahNumber === index + 1}
                         handleSurahChange={() => handleSurahChange(index)}
                         surah={surah} />
-                        
+
                     <Divider light />
-                </>
+                </Fragment>
             )
         })
     }, [quranPlayerState.currentSurahNumber]);

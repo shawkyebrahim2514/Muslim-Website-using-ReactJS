@@ -1,7 +1,5 @@
 import { changeQuranPlayerLocalStorage, getQuranPlayerLocalStorage } from '../data/localStorage';
 
-const initalState = getQuranPlayerLocalStorage();
-
 const changeLocalStorage = (key, value) => {
     changeQuranPlayerLocalStorage(key, value);
 }
@@ -73,7 +71,6 @@ const reducer = (state, action) => {
 
 export {
     reducer,
-    initalState
 }
 
 export {

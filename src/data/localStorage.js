@@ -19,7 +19,7 @@ const getQuranPlayerLocalStorage = () => {
     }
 
     const quranPlayer = JSON.parse(localStorage.getItem('quranPlayer'));
-
+    
     if (quranPlayer) {
         return quranPlayer;
     } else {

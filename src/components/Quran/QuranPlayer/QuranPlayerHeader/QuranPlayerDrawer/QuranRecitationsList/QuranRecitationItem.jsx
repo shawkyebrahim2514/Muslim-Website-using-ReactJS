@@ -15,7 +15,7 @@ export default function QuranRecitationItem({ recitationId, value, recitationNum
 
     return (
         <ListItemButton
-            key={uuid()}s
+            key={uuid()}
             sx={{
                 pl: 4,
                 backgroundColor: quranPlayerState.recitation === recitationId ? 'primary.main' : 'transparent',

@@ -1,5 +1,5 @@
 import { memo, useContext, useEffect, useMemo } from 'react'
-import {useFetch, isLoading, isSuccess, isError } from '../../../../custom-hooks';
+import { useFetch, isLoading, isSuccess, isError } from '../../../../custom-hooks';
 import { getPageAyahs } from '../../../../apis';
 import PageSurahs from './PageSurahs';
 import PageAyahs from './PageAyahs';
@@ -20,7 +20,7 @@ function QuranPlayerBody({ containerMaxWidth }) {
         const firstAyahPageNumber = data.data.ayahs[0].number;
         const lastAyahPageNumber = data.data.ayahs[data.data.ayahs.length - 1].number;
         const firstSurahNumber = data.data.ayahs[0].surah.number;
-        
+
         // This will make sure that the current marked surah option is the chosen one not the first one in the page as the page can contains more than one surah
         const isCurrentSurahNumberModified = Object.keys(data.data.surahs).find((surahNumber) => {
             return parseInt(surahNumber) === quranPlayerState.currentSurahNumber;

@@ -2,17 +2,18 @@ import QuranPlayerHeader from './QuranPlayerHeader'
 import QuranPlayerBody from './QuranPlayerBody'
 import QuranPlayerFooter from './QuranPlayerFooter';
 import { useImmerReducer } from 'use-immer';
-import { reducer, initalState } from '../../../reducers/QuranPlayerReducer';
+import { reducer } from '../../../reducers/QuranPlayerReducer';
 import QuranPlayerContext from './QuranPlayerContext';
 import { useMemo } from 'react';
 import Tafsir from './Tafsir';
 import { Box, Container } from '@mui/material';
+import { getQuranPlayerLocalStorage } from '../../../data/localStorage';
 
 export default function QuranPlayer() {
-    const [quranPlayerState, dispatchQuranPlayerState] = useImmerReducer(reducer, initalState);
+    const [quranPlayerState, dispatchQuranPlayerState] = useImmerReducer(reducer, getQuranPlayerLocalStorage());
     const contextValue = useMemo(() => ([quranPlayerState, dispatchQuranPlayerState]), [quranPlayerState]);
     const containerMaxWidth = useMemo(() => 'xl', []);
-    
+
     return (
         <QuranPlayerContext.Provider value={contextValue}>
             <Box component='main'>

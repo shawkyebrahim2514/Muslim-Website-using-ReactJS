@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { Fragment, useMemo, useState } from 'react'
 import recitations from '../../../../../../data/recitations'
 import List from '@mui/material/List';
 import Collapse from '@mui/material/Collapse';
@@ -13,14 +13,13 @@ export default function QuranRecitationsList() {
     const items = useMemo(() => {
         return Object.entries(recitations).map(([recitationId, value], index) => {
             return (
-                <>
+                <Fragment key={uuid()}>
                     <QuranRecitationItem
-                        key={uuid()}
                         recitationId={recitationId}
                         value={value}
                         recitationNumber={index + 1} />
                     <Divider light />
-                </>
+                </Fragment>
             )
         })
     }, []);
