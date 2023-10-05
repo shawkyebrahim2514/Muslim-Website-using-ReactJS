@@ -73,17 +73,16 @@ function QuranPlayerFooter({ containerMaxWidth }) {
 
     useEffect(() => {
         audioRef.current = new Audio();
-        if (audioRef.current) {
-            const audio = audioRef.current;
-            audio.addEventListener('loadedmetadata', handleLoadedMetadata);
-            audio.addEventListener('timeupdate', handleTimeUpdate);
-            audio.addEventListener('ended', handleEnded);
-            return () => {
-                audio.removeEventListener('loadedmetadata', handleLoadedMetadata);
-                audio.removeEventListener('timeupdate', handleTimeUpdate);
-                audio.removeEventListener('ended', handleEnded);
-            };
-        }
+        const audio = audioRef.current;
+        audio.addEventListener('loadedmetadata', handleLoadedMetadata);
+        audio.addEventListener('timeupdate', handleTimeUpdate);
+        audio.addEventListener('ended', handleEnded);
+        return () => {
+            audio.removeEventListener('loadedmetadata', handleLoadedMetadata);
+            audio.removeEventListener('timeupdate', handleTimeUpdate);
+            audio.removeEventListener('ended', handleEnded);
+            audio.pause();
+        };
     }, []);
 
     useEffect(() => {
