@@ -17,7 +17,7 @@ function QuranSurahItem({ itemNumber, isActive, handleSurahChange, surah }) {
                 {`${(itemNumber).toString().padStart(2, '0')}- ${surah.arabicName}`}
             </ListItemIcon>
             <ListItemText
-                primary={`عدد اياتها ${surah.numberOfAyahs}`}
+                primary={`عدد آياتها ${surah.numberOfAyahs}`}
                 secondary={`فى صفحة ${surah.page}`} />
         </ListItemButton>
     )

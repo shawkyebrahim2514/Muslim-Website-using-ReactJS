@@ -41,7 +41,8 @@ export default function HomeHeader() {
                     sx={{
                         color: 'white',
                         textAlign: 'center',
-                        mt: 3
+                        mt: 3,
+                        lineHeight: 1.6,
                     }}>
                     كِتَٰبٌ أَنزَلۡنَٰهُ إِلَيۡكَ مُبَٰرَكٞ لِّيَدَّبَّرُوٓاْ ءَايَٰتِهِۦ وَلِيَتَذَكَّرَ أُوْلُواْ ٱلۡأَلۡبَٰبِ
                 </Typography>
