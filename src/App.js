@@ -8,6 +8,10 @@ import { Box } from '@mui/material';
 import SpinnerLoading from './components/SpinnerLoading';
 import NotFound from './components/NotFound';
 
+import { inject } from '@vercel/analytics';
+
+inject();
+
 const AdhkarPage = lazy(() => import('./pages/AdhkarPage'));
 const HijriCalendarPage = lazy(() => import('./pages/HijriCalendarPage'));
 const HomePage = lazy(() => import('./pages/HomePage'));
