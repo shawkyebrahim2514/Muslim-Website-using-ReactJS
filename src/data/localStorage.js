@@ -17,7 +17,6 @@ const getQuranPlayerLocalStorage = () => {
         isAudioPlaying: false,
         recitation: 'AbdulBaset_Mujawwad',
     }
-
     const quranPlayer = JSON.parse(localStorage.getItem('quranPlayer'));
     
     if (quranPlayer) {
