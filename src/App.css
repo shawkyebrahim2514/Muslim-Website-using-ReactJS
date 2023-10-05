@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;500;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;500;900&family=Tajawal:wght@300;500;900&display=swap');
+
+@font-face {
+    font-family: "Naskh";
+    src: url('https://www.islambook.com/files/fonts/uthmantn.eot');
+    /* IE9 Compat Modes */
+    src: local('KFGQPC Uthman Taha Naskh'), url('https://www.islambook.com/files/fonts/uthmantn.eot?iefix') format('eot'), /* IE6-IE8 */ url('https://www.islambook.com/files/fonts/uthmantn.otf') format('opentype'), url('https://www.islambook.com/files/fonts/uthmantn.woff') format('woff'), /* Modern Browsers */ url('https://www.islambook.com/files/fonts/uthmantn.ttf') format('truetype'), /* Safari, Android, iOS */ url('https://www.islambook.com/files/fonts/uthmantn.svg#svgFontName') format('svg');
+    /* Legacy iOS */
+}
+
+body {
+    direction: rtl;
+    /* // resize the background-image */
+    background-image: url('../public/svg/background-pattern.svg');
+    background-repeat: repeat;
+    background-size: 50%;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+*  {
+    font-family: 'system-ui', sans-serif !important;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
