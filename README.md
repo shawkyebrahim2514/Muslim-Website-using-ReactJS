@@ -34,16 +34,6 @@ To run this project locally, you need to have the following prerequisites instal
  npm start
 ```
 
-- This will start the server and make the application available at <http://localhost:3500>.
-  
-or
-
-```bash
-  npm run nodemon
-```
-
-- This will start the server using the nodemon package.
-
 2. Open your web browser and navigate to <http://localhost:3000> to access this Muslim website.
 
 ## Technologies and Techniques Used
